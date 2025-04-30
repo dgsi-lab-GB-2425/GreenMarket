@@ -1,4 +1,3 @@
-// src/components/MapaRutas.jsx
 import { MapContainer, TileLayer, Marker, Polyline, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -47,7 +46,7 @@ const cityCoordinates = {
 };
 
 // Mapa de productos a URLs de imágenes (usando versiones más pequeñas con _640.jpg)
-const productImages = {
+export const productImages = {
   'Tomate': 'https://cdn.pixabay.com/photo/2015/08/05/20/20/tomato-877019_1280.jpg',
   'Naranja': 'https://cdn.pixabay.com/photo/2017/01/20/15/06/orange-1995056_1280.jpg',
   'Lechuga': 'https://cdn.pixabay.com/photo/2015/09/14/19/53/nature-940032_1280.jpg',

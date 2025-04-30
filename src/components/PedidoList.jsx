@@ -1,4 +1,3 @@
-// src/components/PedidoList.jsx
 import { useState } from 'react';
 import { useData } from '../context/DataContext';
 import PedidoForm from './PedidoForm';
@@ -24,18 +23,22 @@ function PedidoList() {
               <p><strong>Fecha:</strong> {new Date(pedido.createdAt).toLocaleString()}</p>
             </div>
             <div className="pedido-actions">
-              <button
-                onClick={() => setEditPedido(pedido)}
-                className="action-button edit-button"
-              >
-                Editar
-              </button>
-              <button
-                onClick={() => deletePedido(pedido.id)}
-                className="action-button delete-button"
-              >
-                Eliminar
-              </button>
+              {pedido.estado === 'Pendiente' && (
+                <>
+                  <button
+                    onClick={() => setEditPedido(pedido)}
+                    className="action-button edit-button"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    onClick={() => deletePedido(pedido.id)}
+                    className="action-button delete-button"
+                  >
+                    Eliminar
+                  </button>
+                </>
+              )}
             </div>
           </div>
         ))}

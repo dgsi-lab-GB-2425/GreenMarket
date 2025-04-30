@@ -1,10 +1,9 @@
-// src/components/FeedbackForm.jsx
 import { useState } from 'react';
 import { useData } from '../context/DataContext';
 
 function FeedbackForm() {
-  const { addFeedback } = useData();
-  const [productoId, setProductoId] = useState('1');
+  const { addFeedback, trazabilidad } = useData();
+  const [productoId, setProductoId] = useState(trazabilidad[0]?.id || '1'); // Valor inicial: primer producto
   const [comentario, setComentario] = useState('');
   const [mensaje, setMensaje] = useState('');
 
@@ -38,8 +37,11 @@ function FeedbackForm() {
           onChange={(e) => setProductoId(e.target.value)}
           className="form-input"
         >
-          <option value="1">Tomate</option>
-          <option value="2">Lechuga</option>
+          {trazabilidad.map((item) => (
+            <option key={item.id} value={item.id}>
+              {item.producto}
+            </option>
+          ))}
         </select>
       </div>
       <div className="form-group">
