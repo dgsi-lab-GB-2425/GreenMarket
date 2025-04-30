@@ -1,4 +1,3 @@
-// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { DataProvider } from './context/DataContext';
 import Navbar from './components/Navbar';
@@ -6,8 +5,11 @@ import Home from './pages/Home';
 import Pedidos from './pages/Pedidos';
 import Logistica from './pages/Logistica';
 import Trazabilidad from './pages/Trazabilidad';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import ProtectedRoute from './components/ProtectedRoute';
 
-// Componente opcional para ruta no encontrada
+// Componente para ruta no encontrada
 function NotFound() {
   return (
     <div className="container">
@@ -20,19 +22,37 @@ function NotFound() {
 function App() {
   return (
     <DataProvider>
-      {/* Proveedor de contexto para simular datos */}
       <Router>
-        {/* Enrutador para navegación entre páginas */}
         <div className="app">
-          {/* Barra de navegación común */}
           <Navbar />
-          {/* Definición de rutas */}
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/pedidos" element={<Pedidos />} />
-            <Route path="/logistica" element={<Logistica />} />
-            <Route path="/trazabilidad" element={<Trazabilidad />} />
-            {/* Ruta catch-all para URLs no encontradas */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route
+              path="/pedidos"
+              element={
+                <ProtectedRoute>
+                  <Pedidos />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/logistica"
+              element={
+                <ProtectedRoute>
+                  <Logistica />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/trazabilidad"
+              element={
+                <ProtectedRoute>
+                  <Trazabilidad />
+                </ProtectedRoute>
+              }
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

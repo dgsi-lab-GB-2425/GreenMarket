@@ -12,10 +12,6 @@ function Home() {
             alt="GreenMarket Logo"
             className="home-logo"
           />
-          <div className="home-actions">
-            <a href="/pedidos" className="btn">Ver Pedidos</a>
-            <a href="/trazabilidad" className="btn secondary">Consultar Trazabilidad</a>
-          </div>
         </div>
       </div>
     );

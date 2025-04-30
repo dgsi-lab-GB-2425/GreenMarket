@@ -1,113 +1,120 @@
-// src/mocks/data.js
+const possibleStates = ['Pendiente', 'Enviado', 'Entregado'];
+
+// Función para seleccionar un estado aleatorio
+const getRandomState = () => {
+  const randomIndex = Math.floor(Math.random() * possibleStates.length);
+  return possibleStates[randomIndex];
+};
+
 export const pedidos = [
     {
       id: 1,
       usuarioId: 1,
       productos: ['Tomate', 'Lechuga', 'Zanahoria'],
-      estado: 'Pendiente',
+      estado: getRandomState(),
       createdAt: '2025-04-20T10:00:00Z',
     },
     {
       id: 2,
       usuarioId: 2,
       productos: ['Manzana', 'Pera', 'Fresa'],
-      estado: 'Enviado',
+      estado: getRandomState(),
       createdAt: '2025-04-19T15:30:00Z',
     },
     {
       id: 3,
       usuarioId: 3,
       productos: ['Calabacín', 'Pimiento', 'Cebolla'],
-      estado: 'Entregado',
+      estado: getRandomState(),
       createdAt: '2025-04-18T09:00:00Z',
     },
     {
       id: 4,
       usuarioId: 1,
       productos: ['Aguacate', 'Mango', 'Piña'],
-      estado: 'Pendiente',
+      estado: getRandomState(),
       createdAt: '2025-04-21T12:00:00Z',
     },
     {
       id: 5,
       usuarioId: 4,
       productos: ['Espinaca', 'Brócoli', 'Coliflor'],
-      estado: 'Enviado',
+      estado: getRandomState(),
       createdAt: '2025-04-20T14:00:00Z',
     },
     {
       id: 6,
       usuarioId: 2,
       productos: ['Naranja', 'Limón', 'Mandarina'],
-      estado: 'Entregado',
+      estado: getRandomState(),
       createdAt: '2025-04-17T11:00:00Z',
     },
     {
       id: 7,
       usuarioId: 5,
       productos: ['Patata', 'Boniato', 'Rábano'],
-      estado: 'Pendiente',
+      estado: getRandomState(),
       createdAt: '2025-04-22T08:00:00Z',
     },
     {
       id: 8,
       usuarioId: 3,
       productos: ['Melón', 'Sandía', 'Uva'],
-      estado: 'Enviado',
+      estado: getRandomState(),
       createdAt: '2025-04-21T16:00:00Z',
     },
     {
       id: 9,
       usuarioId: 1,
       productos: ['Pepino', 'Apio', 'Puerro'],
-      estado: 'Entregado',
+      estado: getRandomState(),
       createdAt: '2025-04-16T13:00:00Z',
     },
     {
       id: 10,
       usuarioId: 4,
       productos: ['Albahaca', 'Perejil', 'Cilantro'],
-      estado: 'Pendiente',
+      estado: getRandomState(),
       createdAt: '2025-04-23T09:00:00Z',
     },
     {
       id: 11,
       usuarioId: 2,
       productos: ['Kiwi', 'Plátano', 'Granada'],
-      estado: 'Enviado',
+      estado: getRandomState(),
       createdAt: '2025-04-22T10:30:00Z',
     },
     {
       id: 12,
       usuarioId: 5,
       productos: ['Acelga', 'Remolacha', 'Nabo'],
-      estado: 'Entregado',
+      estado: getRandomState(),
       createdAt: '2025-04-15T17:00:00Z',
     },
     {
       id: 13,
       usuarioId: 3,
       productos: ['Ciruela', 'Melocotón', 'Nectarina'],
-      estado: 'Pendiente',
+      estado: getRandomState(),
       createdAt: '2025-04-23T11:00:00Z',
     },
     {
       id: 14,
       usuarioId: 1,
       productos: ['Berenjena', 'Alcachofa', 'Espárrago'],
-      estado: 'Enviado',
+      estado: getRandomState(),
       createdAt: '2025-04-20T18:00:00Z',
     },
     {
       id: 15,
       usuarioId: 4,
       productos: ['Higo', 'Dátil', 'Albaricoque'],
-      estado: 'Entregado',
+      estado: getRandomState(),
       createdAt: '2025-04-14T12:00:00Z',
     },
-  ];
-  
-  export const trazabilidad = [
+];
+
+export const trazabilidad = [
     {
       id: 1,
       producto: 'Tomate',
@@ -318,4 +325,4 @@ export const pedidos = [
       fecha: '2025-04-30',
       certificado: true,
     },
-  ];
+];
