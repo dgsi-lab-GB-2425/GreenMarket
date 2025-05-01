@@ -18,11 +18,11 @@ GreenMarket es una aplicación web desarrollada como parte de la asignatura Desa
 ## Capturas de Pantalla
 
 ### Mapa de Rutas Logísticas
-![Mapa de Rutas](![alt text](resources/image.png))  
+![Mapa de Rutas](resources/image.png)
 *Mapa interactivo mostrando rutas desde Madrid a varias ciudades de España.*
 
 ### Popup con Productos
-![Popup de Productos](![alt text](resources/image2.png))  
+![Popup de Productos](resources/image2.png)
 *Ejemplo de un popup en Valencia mostrando los productos distribuidos con imágenes.*
 
 ## Instalación
