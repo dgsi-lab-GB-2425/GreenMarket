@@ -1,5 +1,9 @@
 # GreenMarket - Sistema de Trazabilidad Logística
 
+![Estado del proyecto](https://img.shields.io/badge/Estado-Completado-green)
+![Versión](https://img.shields.io/badge/Versión-1.0.0-blue)
+![Licencia](https://img.shields.io/badge/Licencia-CC%20BY--NC%204.0-green)
+
 ## Descripción del Proyecto
 
 GreenMarket es una aplicación web desarrollada como parte de la asignatura Desarrollo y Gestión de Sistemas de Información. Su objetivo principal es visualizar las rutas logísticas de productos agrícolas desde un centro de distribución en Madrid hacia diversas ciudades de España. La aplicación utiliza un mapa interactivo para mostrar las rutas, marcadores con información de productos, y una lista de distribución. Los usuarios pueden ver de manera clara y visual los orígenes de los productos agrícolas y las rutas que siguen hasta su destino.
@@ -10,6 +14,18 @@ GreenMarket es una aplicación web desarrollada como parte de la asignatura Desa
 - **Rutas de Colores**: Polilíneas de diferentes colores conectan Madrid con cada destino.
 - **Lista de Rutas**: Una lista debajo del mapa muestra todas las rutas de distribución con los productos correspondientes.
 - **Imágenes de Productos**: Miniaturas de productos (50x50px) obtenidas desde URLs externas de Pixabay, con manejo de errores.
+
+## Capturas de Pantalla
+
+### Mapa de Rutas Logísticas
+![Mapa de Rutas](resources/image.png)
+
+*Mapa interactivo mostrando rutas desde Madrid a varias ciudades de España.*
+
+### Popup con Productos
+![Popup de Productos](resources/image2.png)
+
+*Ejemplo de un popup en Almería mostrando los productos distribuidos con imágenes.*
 
 ## Instalación
 
