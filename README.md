@@ -1,16 +1,67 @@
-# React + Vite
+# 🌱 GreenMarket - Plataforma de Gestión de Productos Agrícolas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**GreenMarket** es una aplicación web desarrollada con **React** que permite a los usuarios gestionar pedidos, rastrear la trazabilidad de productos agrícolas y visualizar rutas logísticas en un mapa interactivo. Incluye un sistema de autenticación simulado (login/registro), protección de rutas, y un diseño moderno y responsivo. Este proyecto es ideal para aprender sobre el manejo de estado en React y enrutamiento.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 Características Principales
 
-## Expanding the ESLint configuration
+- **Gestión de Pedidos**:
+  - Crear, editar y eliminar pedidos (solo si están en estado "Pendiente").
+  - Buscador interactivo para seleccionar productos con imágenes, nombres y cantidades.
+  - Estados de pedidos (`Pendiente`, `Enviado`, `Entregado`).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Trazabilidad de Productos**:
+  - Lista de productos con su origen, fecha y certificación.
+  - Imágenes de productos integradas desde URLs externas.
 
-## License
+- **Logística y Mapa**:
+  - Mapa interactivo con **Leaflet** que muestra rutas de distribución desde Madrid a diferentes ciudades.
+  - Popups con imágenes de productos (50x50 px) y nombres en cada destino.
 
-This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). For more details, please see the LICENSE file or visit https://creativecommons.org/licenses/by-nc/4.0/.
+- **Feedback**:
+  - Formulario para enviar feedback sobre productos, con un desplegable que incluye todos los productos de trazabilidad.
+
+- **Autenticación Simulada**:
+  - Registro e inicio de sesión con almacenamiento en el estado global (sin backend real).
+  - Protección de rutas: solo usuarios autenticados pueden acceder a ciertas páginas.
+
+- **Diseño Responsivo**:
+  - Estilizado con CSS puro, con un diseño limpio y moderno.
+  - Uso de variables CSS para colores y espaciado consistente.
+
+---
+
+## 📂 Estructura del Proyecto
+
+src/
+├── components/              # Componentes reutilizables
+│   ├── FeedbackForm.jsx     # Formulario de feedback
+│   ├── MapaRutas.jsx        # Mapa interactivo con rutas logísticas
+│   ├── Navbar.jsx           # Barra de navegación
+│   ├── PedidoForm.jsx       # Formulario para crear/editar pedidos
+│   ├── PedidoList.jsx       # Lista de pedidos
+│   ├── ProtectedRoute.jsx   # Componente para proteger rutas
+│   └── TrazabilidadView.jsx # Vista de trazabilidad de productos
+├── context/                 # Contexto para manejo de estado global
+│   └── DataContext.jsx      # Contexto y proveedor de datos
+├── mocks/                   # Datos simulados
+│   └── data.js              # Datos de pedidos y trazabilidad
+├── pages/                   # Páginas de la aplicación
+│   ├── Home.jsx             # Página principal
+│   ├── Login.jsx            # Página de inicio de sesión
+│   ├── Logistica.jsx        # Página de logística
+│   ├── Pedidos.jsx          # Página de pedidos
+│   ├── Register.jsx         # Página de registro
+│   └── Trazabilidad.jsx     # Página de trazabilidad
+├── App.jsx                  # Componente raíz y enrutamiento
+└── index.css                # Estilos globales
+
+📝 **Futuras Mejoras**  
+✔ Añadir persistencia de usuarios  
+✔ Mostrar cantidades en pedidos  
+✔ Mejorar validación de formularios  
+✔ Agregar filtrado y paginación  
+✔ Implementar backend con Node.js/MongoDB  
+
+🌟 **¡Gracias por usar GreenMarket!** 🌟  
