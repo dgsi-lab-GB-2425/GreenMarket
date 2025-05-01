@@ -11,16 +11,6 @@ GreenMarket es una aplicación web desarrollada como parte de la asignatura Desa
 - **Lista de Rutas**: Una lista debajo del mapa muestra todas las rutas de distribución con los productos correspondientes.
 - **Imágenes de Productos**: Miniaturas de productos (50x50px) obtenidas desde URLs externas de Pixabay, con manejo de errores.
 
-## Capturas de Pantalla
-
-### Mapa de Rutas Logísticas
-![Mapa de Rutas](![alt text](resources/image.png))  
-*Mapa interactivo mostrando rutas desde Madrid a varias ciudades de España.*
-
-### Popup con Productos
-![Popup de Productos](![alt text](resources/image2.png))  
-*Ejemplo de un popup en Valencia mostrando los productos distribuidos con imágenes.*
-
 ## Instalación
 
 ### Prerrequisitos
