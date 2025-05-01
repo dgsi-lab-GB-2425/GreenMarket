@@ -50,7 +50,9 @@ GreenMarket es una aplicación web desarrollada como parte de la asignatura Desa
    npm run dev
    ```
 
-4. Abre tu navegador y navega a `https://greenmarket.surge.sh/` para ver el mapa de rutas logísticas.
+## Página Web
+
+Puedes acceder a la aplicación mediante el siguiente enlace sin necesidad de instalar nada: `https://greenmarket.surge.sh`
 
 ## Uso
 
