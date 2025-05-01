@@ -52,7 +52,7 @@ GreenMarket es una aplicación web desarrollada como parte de la asignatura Desa
 
 ## Página Web
 
-Puedes acceder a la aplicación mediante el siguiente enlace sinn necesidad de instalar nada: `https://greenmarket.surge.sh`
+Puedes acceder a la aplicación mediante el siguiente enlace sin necesidad de instalar nada: `https://greenmarket.surge.sh`
 
 ## Uso
 
